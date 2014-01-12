@@ -116,12 +116,10 @@ typedef map<NSString*, DZPointerSet> DZObserverMap;
     if (!selector  || !params) {
         return;
     }
-    
     for (DZPointerSet::iterator itor = set->begin(); itor != set->end(); itor++) {
         __strong id observer = (__bridge id)*itor;
-        SendSelectorToObjectInMainThread(selector, observer, params);
+        SendSelectorToObjectInMainThreadWithParams(selector, observer, params);
     }
-
 }
 
 

@@ -22,6 +22,8 @@
 		65093F63188191CE00734D65 /* DZSingletonFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 65093F62188191CE00734D65 /* DZSingletonFactory.m */; };
 		65093F66188191E000734D65 /* DZNotificationCenter.mm in Sources */ = {isa = PBXBuildFile; fileRef = 65093F65188191E000734D65 /* DZNotificationCenter.mm */; };
 		65093F69188193DD00734D65 /* DZSendSelector.m in Sources */ = {isa = PBXBuildFile; fileRef = 65093F68188193DD00734D65 /* DZSendSelector.m */; };
+		65093F731882F64000734D65 /* DZViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 65093F711882F64000734D65 /* DZViewController.m */; };
+		65093F741882F64000734D65 /* DZViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65093F721882F64000734D65 /* DZViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,9 @@
 		65093F65188191E000734D65 /* DZNotificationCenter.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DZNotificationCenter.mm; sourceTree = "<group>"; };
 		65093F67188193DD00734D65 /* DZSendSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSendSelector.h; sourceTree = "<group>"; };
 		65093F68188193DD00734D65 /* DZSendSelector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZSendSelector.m; sourceTree = "<group>"; };
+		65093F701882F64000734D65 /* DZViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZViewController.h; sourceTree = "<group>"; };
+		65093F711882F64000734D65 /* DZViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DZViewController.m; sourceTree = "<group>"; };
+		65093F721882F64000734D65 /* DZViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DZViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +129,9 @@
 				65093F65188191E000734D65 /* DZNotificationCenter.mm */,
 				65093F41188191BE00734D65 /* DZAppDelegate.h */,
 				65093F42188191BE00734D65 /* DZAppDelegate.m */,
+				65093F701882F64000734D65 /* DZViewController.h */,
+				65093F711882F64000734D65 /* DZViewController.m */,
+				65093F721882F64000734D65 /* DZViewController.xib */,
 				65093F44188191BE00734D65 /* Images.xcassets */,
 				65093F39188191BE00734D65 /* Supporting Files */,
 			);
@@ -237,6 +245,7 @@
 			files = (
 				65093F3D188191BE00734D65 /* InfoPlist.strings in Resources */,
 				65093F45188191BE00734D65 /* Images.xcassets in Resources */,
+				65093F741882F64000734D65 /* DZViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +268,7 @@
 				65093F43188191BE00734D65 /* DZAppDelegate.m in Sources */,
 				65093F66188191E000734D65 /* DZNotificationCenter.mm in Sources */,
 				65093F3F188191BE00734D65 /* main.m in Sources */,
+				65093F731882F64000734D65 /* DZViewController.m in Sources */,
 				65093F63188191CE00734D65 /* DZSingletonFactory.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

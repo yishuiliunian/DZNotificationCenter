@@ -7,15 +7,49 @@
 //
 
 #import "DZAppDelegate.h"
+#import "DZNotificationCenter.h"
+
+#import "DZViewController.h"
+
+
+@interface DZAppDelegate () <DZNotificationInitDelegaete>
+
+@end
 
 @implementation DZAppDelegate
 
+- (DZDecodeNotificationBlock) decodeNotification:(NSString *)message forCenter:(DZNotificationCenter *)center
+{
+    if (message == kDZMessageTest) {
+        return ^(NSDictionary* userInfo, NSMutableArray* __autoreleasing* params){
+            NSString* key = userInfo[@"key"];
+            if (params != NULL) {
+                *params = [NSMutableArray new];
+            }
+            [*params  addObject:key];
+            return @selector(handlePortMessage:);
+        };
+    }
+    return nil;
+}
+
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    
+    [DZDefaultNotificationCenter addDecodeNotificationBlock:^SEL(NSDictionary *userInfo, NSMutableArray *__autoreleasing *params) {
+        NSString* key = userInfo[@"key"];
+        if (params != NULL) {
+            *params = [NSMutableArray new];
+        }
+        [*params  addObject:key];
+        return @selector(handleTestMessageWithKey:);
+    } forMessage:kDZMessageTest];
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
     self.window.backgroundColor = [UIColor whiteColor];
+    self.window.rootViewController = [DZViewController new];
     [self.window makeKeyAndVisible];
+    
     return YES;
 }
 

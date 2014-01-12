@@ -26,7 +26,7 @@ void SendSelectorToObjectInMainThreadWithParams(SEL selector, id observer, NSArr
         NSMethodSignature* methodSignature = [[observer class] instanceMethodSignatureForSelector:selector];
         if(methodSignature)
         {
-            NSCAssert(methodSignature.numberOfArguments == params.count +1, @"params count is error , you may lost some  param ");
+            NSCAssert(methodSignature.numberOfArguments == params.count +2, @"params count is error , you may lost some  param ");
             NSInvocation* invocation = [NSInvocation invocationWithMethodSignature:methodSignature];
             [invocation setSelector:selector];
             [invocation setTarget:observer];

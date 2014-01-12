@@ -11,6 +11,7 @@
 extern "C" {
 #endif
 extern void addArgumentToArray(NSMutableArray* array, id param);
+    void SendSelectorToObjectInMainThreadWithParams(SEL selector, id observer, NSArray* params);
 extern void SendSelectorToObjectInMainThread(SEL selector, id observer, id params);
 extern void SendSelectorToObjectInMainThreadWith2Params(SEL selector, id observer, id params, id);
 extern void SendSelectorToObjectInMainThreadWith3Params(SEL selector, id observer , id param1, id param2, id param3) ;
